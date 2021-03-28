@@ -3,6 +3,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import firebase from 'firebase';
+import AntDesign from "react-native-vector-icons/AntDesign"
+import Ionicons from "react-native-vector-icons/MaterialIcons"
 
 import Loading from './Components/Screens/Loading';
 import SignIn from './Components/Screens/SignIn';
@@ -11,7 +13,8 @@ import {firebaseConfig} from './Utils/firebaseConfig';
 import signUp from './Components/Screens/signUp';
 import Profile from './Components/Screens/Profile';
 import PostScreen from './Components/Screens/PostScreen';
-import { Text, TouchableOpacity } from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
+import ForgotScreen from './Components/Screens/forgetScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -25,9 +28,9 @@ const App = ({navigation}) => {
 
   function TabNavigator() {
     return (
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Navigator tabBarOptions={{activeTintColor:"#000",inactiveTintColor:"rgba(0,0,0,0.5)"}}>
+        <Tab.Screen name="Home" options={{tabBarLabel:"Home",tabBarIcon:({color}) => (<AntDesign name="home" color={color} size={28} />)}} component={Home} />
+        <Tab.Screen name="Profile" options={{tabBarIcon:({color}) => (<Ionicons name="people" color={color} size={28} />)}} component={Profile} />
       </Tab.Navigator>
     );
   }
@@ -52,13 +55,19 @@ const App = ({navigation}) => {
         />
         <Stack.Screen
           name="Main"
-          options={{headerShown: true,headerTitle:"Feed",headerLeft:() => null,headerRight:() =><TouchableOpacity onPress={() => {navigation.navigate('PostScreen')}}><Text style={{fontSize:18,fontWeight:"bold",marginHorizontal:14}}>Post</Text></TouchableOpacity> }}
+          options={{
+            headerShown: false,
+            headerTitle: 'Feed',
+            headerLeft: () => null,
+          }}
           component={TabNavigator}
         />
         <Stack.Screen
-        name="PostScreen"
-        component={PostScreen}
+          name="PostScreen"
+          options={{headerShown: false}}
+          component={PostScreen}
         />
+        <Stack.Screen name="Forgot" component={ForgotScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
