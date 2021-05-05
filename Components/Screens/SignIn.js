@@ -1,130 +1,60 @@
-import React, { useEffect, useState } from "react";
-import { View, Text, TextInput, KeyboardAvoidingView } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import {
-  padding,
-  width,
-  height,
-} from "../../Utils/constants/styles";
-import color from "../../Utils/constants/color"
-import firebase from "firebase";
-import DocumentPicker from "react-native-document-picker"
+import React, {useEffect, useState} from 'react';
+import {View, Text, TextInput, KeyboardAvoidingView, Alert} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import {padding, width, height} from '../../Utils/constants/styles';
+import color from '../../Utils/constants/color';
+import auth from '@react-native-firebase/auth';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export default function signIn({navigation}) {
- 
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
   const [error, setError] = useState();
   const [Image, setImage] = useState();
 
-
-  const PickProfileImage = async() =>{
-    try {
-      const res = await DocumentPicker.pick({
-        type: [DocumentPicker.types.images],
-      });
-      console.log(
-        res.uri,
-        res.type, // mime type
-        res.name,
-        res.size
-      );
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        // User cancelled the picker, exit any dialogs or menus and move on
-      } else {
-        throw err;
-      }
-    }
-    
-    // Pick multiple files
-    try {
-      const results = await DocumentPicker.pickMultiple({
-        type: [DocumentPicker.types.images],
-      });
-      for (const res of results) {
-        console.log(
-          res.uri,
-          res.type, // mime type
-          res.name,
-          res.size
-        );
-      }
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        // User cancelled the picker, exit any dialogs or menus and move on
-      } else {
-        throw err;
-      }
-    }
-  }
-
- async function GoogleLoginAsync(){
-    try {
-      await GoogleSignIn.askForPlayServicesAsync();
-      const { type, user } = await GoogleSignIn.signInAsync();
-      if (type === 'success') {
-        await firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
-        const credential = firebase.auth.GoogleAuthProvider.credential(user.auth.idToken, user.auth.accessToken,);
-        const googleProfileData = await firebase.auth().signInWithCredential(credential);
-        this.onLoginSuccess.bind(this);
-      }
-    } catch ({ message }) {
-      alert('login: Error:' + message);
-    }
-  }
-
-  function signUp() {
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then(() => {
-        firebase.database().ref('user').set({
-          userUid: firebase.auth().currentUser.uid,
-          createdAt: Date.UTC,
-        });
-      })
-      .catch((error) => {
-        if (error.code === "auth/email-already-in-use") {
-          setError("That email address is already in use!");
-          console.log("That email address is already in use!");
-        }
-        if (error.code === "auth/") {
-          setError("invalid");
-        }
-
-        if (error.code === "auth/invalid-email") {
-          setError("That email address is invalid!");
-        }
-        setError(error.message);
-      });
-  }
   function Login() {
-    firebase
-      .auth()
+    auth()
       .signInWithEmailAndPassword(email, password)
       .catch((e) => {
-        setError(e.message);
+        switch (e.code) {
+          case 'auth/invalid-email':
+            Alert.alert('The email you have entered is invalid');
+          case 'auth/user-disabled':
+            Alert.alert('This user is Disabled');
+          case 'auth/user-not-found':
+            Alert.alert('The email you have entered could not be found');
+          case 'auth/wrong-password':
+            Alert.alert('The password is incorrect');
+        }
       });
   }
 
   return (
-    <View>
+    <KeyboardAvoidingView style={{backgroundColor: '#fff', flex: 1}}>
       <View>
-        <KeyboardAvoidingView>
+        <Text
+          style={{
+            position: 'absolute',
+            fontSize: 64,
+            alignSelf: 'center',
+            top: '30%',
+          }}>
+          {'𝓟𝓱𝓸𝓽𝓸𝓰𝓻𝓪𝓶'}
+        </Text>
+        <KeyboardAvoidingView style={{marginTop: height / 3}}>
           <TextInput
             placeholder="Email"
             onChangeText={(val) => setEmail(val)}
             style={{
-              padding,
-              fontSize: padding,
-              elevation: 28,
-              backgroundColor: color.primary,
-              shadowColor: color.secondry,
-              marginTop: height / 4,
+              padding: 10,
+
+              fontSize: padding - 6,
+              backgroundColor: '#F6F6F6',
               marginVertical: padding - 4,
               marginHorizontal: padding,
-              fontWeight: "bold",
+              borderColor: '#111',
+              borderWidth: 0.5,
+              borderRadius: 5,
             }}
           />
 
@@ -133,62 +63,58 @@ export default function signIn({navigation}) {
             onChangeText={(val) => setPassword(val)}
             secureTextEntry
             style={{
-              padding,
-              fontSize: padding,
-              elevation: 28,
-              backgroundColor: color.primary,
-              shadowColor: color.secondry,
+              padding: 10,
+              fontSize: padding - 6,
+              backgroundColor: '#F6F6F6',
               marginHorizontal: padding,
-              fontWeight: "bold",
+              borderColor: '#111',
+              borderWidth: 0.5,
+              borderRadius: 5,
             }}
           />
           <Text
             style={{
-              color: "red",
+              color: 'red',
+              position: 'absolute',
               top: 24 / 2,
-              fontWeight: "bold",
+              fontWeight: 'bold',
               letterSpacing: 0.5,
-              fontSize: padding - 2,
-              textAlign: "center",
+              fontSize: padding - 6,
+              textAlign: 'center',
               marginTop: padding - 10,
-            }}
-          >
+            }}>
             {error}
           </Text>
           <View
             style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
               marginTop: width / 14,
               elevation: 28,
               shadowColor: color.secondry,
-            }}
-          >
+            }}>
             <TouchableOpacity
               onPress={() => Login(email, password)}
-              style={{ elevation: 28, shadowColor: color.secondry }}
-            >
-              <View style={{ elevation: 28, shadowColor: color.secondry }}>
+              style={{
+                alignSelf: 'center',
+                backgroundColor: '#45A4FF',
+                padding: 10,
+                borderRadius: 5,
+                width: width - 40,
+              }}>
+              <View>
                 <Text
                   style={{
                     fontSize: padding - 1,
-                    marginLeft: padding,
-                    backgroundColor: color.secondry,
-                    padding,
-                    borderRadius: padding,
-                    width: width / 3,
-                    textAlign: "center",
-                    color: color.secondry,
-                  }}
-                >
+
+                    textAlign: 'center',
+                    color: color.primary,
+                  }}>
                   Login
                 </Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               onPress={() => navigation.push('signUp')}
-              style={{ elevation: 28, shadowColor: color.secondry }}
-            >
+              style={{elevation: 28, shadowColor: color.secondry}}>
               <Text
                 style={{
                   fontSize: padding - 1,
@@ -197,16 +123,35 @@ export default function signIn({navigation}) {
                   padding,
                   borderRadius: padding,
                   width: width / 3,
-                  textAlign: "center",
+                  textAlign: 'center',
                   color: color.primary,
-                }}
-              >
+                }}>
                 Sign Up
               </Text>
-            </TouchableOpacity>
-          </View>      
+            </TouchableOpacity> */}
+          </View>
+          <Text
+            onPress={() => navigation.navigate('Forgot')}
+            style={{textAlign: 'center', fontSize: 12, marginVertical: 24}}>
+            Forgot yor password ? Get help in logging in .
+          </Text>
         </KeyboardAvoidingView>
       </View>
-    </View>
+      <View
+        style={{
+          position: 'absolute',
+          zIndex: 10,
+          bottom: 5,
+          borderTopColor: '#222',
+          borderTopWidth: 0.5,
+          width,
+          padding: 10,
+        }}>
+        <Text style={{alignItems: 'center', textAlign: 'center'}}>
+          Dont't have an account?
+          <Text onPress={() => navigation.navigate('signUp')} style={{color: '#1467B7'}}> Sign Up</Text>
+        </Text>
+      </View>
+    </KeyboardAvoidingView>
   );
 }

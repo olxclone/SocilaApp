@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { View, Text } from 'react-native'
-import firebase from "firebase"
+import auth from "@react-native-firebase/auth"
 
 export default function Loading({navigation}) {
     useEffect(() => {
-        firebase.auth().onAuthStateChanged((user) => {
+        auth().onAuthStateChanged((user) => {
             if(user){
                 navigation.push('Main')
             }else{

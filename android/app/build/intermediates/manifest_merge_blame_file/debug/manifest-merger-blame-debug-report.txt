@@ -12,57 +12,402 @@
 11-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\debug\AndroidManifest.xml:5:5-77
 11-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\debug\AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:4:5-67
-12-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:4:22-64
-13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->[com.facebook.flipper:flipper:0.54.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\1c7787ec82631e0394972c76bdabe608\flipper-0.54.0\AndroidManifest.xml:16:5-76
-13-->[com.facebook.flipper:flipper:0.54.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\1c7787ec82631e0394972c76bdabe608\flipper-0.54.0\AndroidManifest.xml:16:22-73
+12-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:3:4-66
+12-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:3:21-63
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:4:1-60
+13-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:4:18-58
 14
-15    <application
-15-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:6:5-25:19
-16        android:name="com.chat.MainApplication"
-16-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:7:7-38
-17        android:allowBackup="false"
-17-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:11:7-34
-18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.1.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\639e914bfc1efa21e36199d3ff2c5eef\core-1.1.0\AndroidManifest.xml:24:18-86
-19        android:debuggable="true"
-20        android:icon="@mipmap/ic_launcher"
-20-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:9:7-41
-21        android:label="@string/app_name"
-21-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:8:7-39
-22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:10:7-52
-23        android:theme="@style/AppTheme"
-23-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:12:7-38
-24        android:usesCleartextTraffic="true" >
-24-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\debug\AndroidManifest.xml:7:18-53
-25        <activity
-25-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:13:7-23:18
-26            android:name="com.chat.MainActivity"
-26-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:14:9-37
-27            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-27-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:16:9-86
-28            android:label="@string/app_name"
-28-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:15:9-41
-29            android:launchMode="singleTask"
-29-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:17:9-40
-30            android:windowSoftInputMode="adjustResize" >
-30-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:18:9-51
-31            <intent-filter>
-31-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:19:9-22:25
-32                <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:20:13-65
-32-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:20:21-62
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:21:13-73
-34-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:21:23-70
-35            </intent-filter>
-36        </activity>
-37        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-37-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:24:7-84
-37-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:24:17-81
-38    </application>
-39
-40</manifest>
+15    <uses-feature
+15-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:5:1-81
+16        android:name="android.hardware.camera"
+16-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:5:15-53
+17        android:required="false" />
+17-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:5:54-78
+18    <uses-feature
+18-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:6:1-87
+19        android:name="android.hardware.camera.front"
+19-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:6:15-59
+20        android:required="false" />
+20-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:6:60-84
+21
+22    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+22-->[com.facebook.flipper:flipper:0.54.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4a0ab883b428a001e3c62d2f83180b85\jetified-flipper-0.54.0\AndroidManifest.xml:16:5-76
+22-->[com.facebook.flipper:flipper:0.54.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4a0ab883b428a001e3c62d2f83180b85\jetified-flipper-0.54.0\AndroidManifest.xml:16:22-73
+23    <uses-permission android:name="android.permission.WAKE_LOCK" />
+23-->[:react-native-firebase_auth] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\@react-native-firebase\auth\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-68
+23-->[:react-native-firebase_auth] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\@react-native-firebase\auth\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-65
+24    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- TODO(salakar) Not sure if this should be part of the package manifest or leave to users app manifest code? -->
+24-->[:react-native-firebase_auth] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\@react-native-firebase\auth\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-79
+24-->[:react-native-firebase_auth] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\@react-native-firebase\auth\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-76
+25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+25-->[:react-native-firebase_storage] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\@react-native-firebase\storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-80
+25-->[:react-native-firebase_storage] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\@react-native-firebase\storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:22-77
+26    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+26-->[:react-native-firebase_storage] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\@react-native-firebase\storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:5-81
+26-->[:react-native-firebase_storage] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\@react-native-firebase\storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:22-78
+27
+28    <queries>
+28-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-14:15
+29        <intent>
+29-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-13:18
+30            <action android:name="android.media.action.IMAGE_CAPTURE" />
+30-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-73
+30-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:21-70
+31        </intent>
+32    </queries> <!-- Required by older versions of Google Play services to create IID tokens -->
+33    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+33-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:26:5-82
+33-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:26:22-79
+34
+35    <application
+35-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:7:5-26:19
+36        android:name="com.chat.MainApplication"
+36-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:8:7-38
+37        android:allowBackup="false"
+37-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:12:7-34
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.1.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\27e2bb30340e616c25c92ba0140cf1e8\core-1.1.0\AndroidManifest.xml:24:18-86
+39        android:debuggable="true"
+40        android:icon="@mipmap/ic_launcher"
+40-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:10:7-41
+41        android:label="@string/app_name"
+41-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:9:7-39
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:11:7-52
+43        android:theme="@style/AppTheme"
+43-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:13:7-38
+44        android:usesCleartextTraffic="true" >
+44-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\debug\AndroidManifest.xml:7:18-53
+45        <activity
+45-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:14:7-24:18
+46            android:name="com.chat.MainActivity"
+46-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:15:9-37
+47            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+47-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:17:9-86
+48            android:label="@string/app_name"
+48-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:16:9-41
+49            android:launchMode="singleTask"
+49-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:18:9-40
+50            android:windowSoftInputMode="adjustResize" >
+50-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:19:9-51
+51            <intent-filter>
+51-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:20:9-23:25
+52                <action android:name="android.intent.action.MAIN" />
+52-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:21:13-65
+52-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:21:21-62
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:22:13-73
+54-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:22:23-70
+55            </intent-filter>
+56        </activity>
+57        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+57-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:25:7-84
+57-->C:\Users\imano\Documents\Madan\Expo\Chat\android\app\src\main\AndroidManifest.xml:25:17-81
+58
+59        <provider
+59-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:9-27:20
+60            android:name="androidx.core.content.FileProvider"
+60-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-62
+61            android:authorities="com.chat.provider"
+61-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-60
+62            android:exported="false"
+62-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-37
+63            android:grantUriPermissions="true" >
+63-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-47
+64            <meta-data
+64-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-26:58
+65                android:name="android.support.FILE_PROVIDER_PATHS"
+65-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:17-67
+66                android:resource="@xml/provider_paths" />
+66-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:17-55
+67        </provider>
+68
+69        <activity
+69-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:9-31:72
+70            android:name="com.yalantis.ucrop.UCropActivity"
+70-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-60
+71            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+71-->[:react-native-image-crop-picker] C:\Users\imano\Documents\Madan\Expo\Chat\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-69
+72
+73        <service
+73-->[com.google.firebase:firebase-firestore:22.1.2] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\a564dbd9b99f1857c43cc03e57a7c06f\jetified-firebase-firestore-22.1.2\AndroidManifest.xml:17:9-23:19
+74            android:name="com.google.firebase.components.ComponentDiscoveryService"
+74-->[com.google.firebase:firebase-firestore:22.1.2] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\a564dbd9b99f1857c43cc03e57a7c06f\jetified-firebase-firestore-22.1.2\AndroidManifest.xml:18:13-84
+75            android:directBootAware="true"
+75-->[com.google.firebase:firebase-common:19.5.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\304165273b4d1a6be95bc2d038837cc8\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
+76            android:exported="false" >
+76-->[com.google.firebase:firebase-firestore:22.1.2] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\a564dbd9b99f1857c43cc03e57a7c06f\jetified-firebase-firestore-22.1.2\AndroidManifest.xml:19:13-37
+77            <meta-data
+77-->[com.google.firebase:firebase-firestore:22.1.2] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\a564dbd9b99f1857c43cc03e57a7c06f\jetified-firebase-firestore-22.1.2\AndroidManifest.xml:20:13-22:85
+78                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+78-->[com.google.firebase:firebase-firestore:22.1.2] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\a564dbd9b99f1857c43cc03e57a7c06f\jetified-firebase-firestore-22.1.2\AndroidManifest.xml:21:17-111
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-firestore:22.1.2] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\a564dbd9b99f1857c43cc03e57a7c06f\jetified-firebase-firestore-22.1.2\AndroidManifest.xml:22:17-82
+80            <meta-data
+80-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:39:13-41:85
+81                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+81-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:40:17-119
+82                android:value="com.google.firebase.components.ComponentRegistrar" />
+82-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:41:17-82
+83            <meta-data
+83-->[com.google.firebase:firebase-datatransport:17.0.10] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\bb7990c3d387a688fc76a3a3d8afb583\jetified-firebase-datatransport-17.0.10\AndroidManifest.xml:28:13-30:85
+84                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+84-->[com.google.firebase:firebase-datatransport:17.0.10] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\bb7990c3d387a688fc76a3a3d8afb583\jetified-firebase-datatransport-17.0.10\AndroidManifest.xml:29:17-115
+85                android:value="com.google.firebase.components.ComponentRegistrar" />
+85-->[com.google.firebase:firebase-datatransport:17.0.10] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\bb7990c3d387a688fc76a3a3d8afb583\jetified-firebase-datatransport-17.0.10\AndroidManifest.xml:30:17-82
+86            <meta-data
+86-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:77:13-79:85
+87                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+87-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:78:17-109
+88                android:value="com.google.firebase.components.ComponentRegistrar" />
+88-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:79:17-82
+89            <meta-data
+89-->[com.google.firebase:firebase-storage:19.2.2] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\83791275a2232a8ed98824df17409b3a\jetified-firebase-storage-19.2.2\AndroidManifest.xml:33:13-35:85
+90                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+90-->[com.google.firebase:firebase-storage:19.2.2] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\83791275a2232a8ed98824df17409b3a\jetified-firebase-storage-19.2.2\AndroidManifest.xml:34:17-107
+91                android:value="com.google.firebase.components.ComponentRegistrar" />
+91-->[com.google.firebase:firebase-storage:19.2.2] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\83791275a2232a8ed98824df17409b3a\jetified-firebase-storage-19.2.2\AndroidManifest.xml:35:17-82
+92            <meta-data
+92-->[com.google.firebase:firebase-database:19.7.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\35397144613b50e85c8dd7a0a86a02d1\jetified-firebase-database-19.7.0\AndroidManifest.xml:32:13-34:85
+93                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+93-->[com.google.firebase:firebase-database:19.7.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\35397144613b50e85c8dd7a0a86a02d1\jetified-firebase-database-19.7.0\AndroidManifest.xml:33:17-109
+94                android:value="com.google.firebase.components.ComponentRegistrar" />
+94-->[com.google.firebase:firebase-database:19.7.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\35397144613b50e85c8dd7a0a86a02d1\jetified-firebase-database-19.7.0\AndroidManifest.xml:34:17-82
+95            <meta-data
+95-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:32:13-34:85
+96                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+96-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:33:17-96
+97                android:value="com.google.firebase.components.ComponentRegistrar" />
+97-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:34:17-82
+98            <meta-data
+98-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\c2cc4d9fa856bbf3206aaf87a442c79d\jetified-firebase-installations-16.3.5\AndroidManifest.xml:18:13-20:85
+99                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+99-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\c2cc4d9fa856bbf3206aaf87a442c79d\jetified-firebase-installations-16.3.5\AndroidManifest.xml:19:17-127
+100                android:value="com.google.firebase.components.ComponentRegistrar" />
+100-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\c2cc4d9fa856bbf3206aaf87a442c79d\jetified-firebase-installations-16.3.5\AndroidManifest.xml:20:17-82
+101            <!--
+102                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+103                clients to use it as well, by defining this registrar in their own core/common library.
+104            -->
+105            <meta-data
+105-->[com.google.firebase:firebase-common:19.5.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\304165273b4d1a6be95bc2d038837cc8\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+106                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+106-->[com.google.firebase:firebase-common:19.5.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\304165273b4d1a6be95bc2d038837cc8\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-common:19.5.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\304165273b4d1a6be95bc2d038837cc8\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+108        </service>
+109        <!--
+110             FirebaseMessagingService performs security checks at runtime,
+111             but set to not exported to explicitly avoid allowing another app to call it.
+112        -->
+113        <service
+113-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:28:9-35:19
+114            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+114-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:29:13-82
+115            android:directBootAware="true"
+115-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:30:13-43
+116            android:exported="false" >
+116-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:31:13-37
+117            <intent-filter android:priority="-500" >
+117-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:32:13-34:29
+117-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:32:28-51
+118                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+118-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:33:17-78
+118-->[com.google.firebase:firebase-messaging:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\8bd553311f910bccc650216b11f0b7a6\jetified-firebase-messaging-21.0.1\AndroidManifest.xml:33:25-75
+119            </intent-filter>
+120        </service>
+121        <service
+121-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\3fa7196ec0472169b7dd090f50708b96\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+122            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+122-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\3fa7196ec0472169b7dd090f50708b96\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+123            android:exported="false" >
+123-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\3fa7196ec0472169b7dd090f50708b96\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+124            <meta-data
+124-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\3fa7196ec0472169b7dd090f50708b96\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+125                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+125-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\3fa7196ec0472169b7dd090f50708b96\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+126                android:value="cct" />
+126-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\3fa7196ec0472169b7dd090f50708b96\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+127        </service>
+128        <service
+128-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\0bfdd6a990fed8a30270cb5a1c7a4d0e\jetified-transport-runtime-2.2.5\AndroidManifest.xml:26:9-30:19
+129            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+129-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\0bfdd6a990fed8a30270cb5a1c7a4d0e\jetified-transport-runtime-2.2.5\AndroidManifest.xml:27:13-117
+130            android:exported="false"
+130-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\0bfdd6a990fed8a30270cb5a1c7a4d0e\jetified-transport-runtime-2.2.5\AndroidManifest.xml:28:13-37
+131            android:permission="android.permission.BIND_JOB_SERVICE" >
+131-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\0bfdd6a990fed8a30270cb5a1c7a4d0e\jetified-transport-runtime-2.2.5\AndroidManifest.xml:29:13-69
+132        </service>
+133
+134        <receiver
+134-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\0bfdd6a990fed8a30270cb5a1c7a4d0e\jetified-transport-runtime-2.2.5\AndroidManifest.xml:32:9-34:40
+135            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+135-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\0bfdd6a990fed8a30270cb5a1c7a4d0e\jetified-transport-runtime-2.2.5\AndroidManifest.xml:33:13-132
+136            android:exported="false" />
+136-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\0bfdd6a990fed8a30270cb5a1c7a4d0e\jetified-transport-runtime-2.2.5\AndroidManifest.xml:34:13-37
+137
+138        <activity
+138-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\980b5bfe3e3724d47215f6bea507074f\jetified-play-services-auth-19.0.0\AndroidManifest.xml:23:9-27:75
+139            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+139-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\980b5bfe3e3724d47215f6bea507074f\jetified-play-services-auth-19.0.0\AndroidManifest.xml:24:13-93
+140            android:excludeFromRecents="true"
+140-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\980b5bfe3e3724d47215f6bea507074f\jetified-play-services-auth-19.0.0\AndroidManifest.xml:25:13-46
+141            android:exported="false"
+141-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\980b5bfe3e3724d47215f6bea507074f\jetified-play-services-auth-19.0.0\AndroidManifest.xml:26:13-37
+142            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+142-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\980b5bfe3e3724d47215f6bea507074f\jetified-play-services-auth-19.0.0\AndroidManifest.xml:27:13-72
+143        <!--
+144            Service handling Google Sign-In user revocation. For apps that do not integrate with
+145            Google Sign-In, this service will never be started.
+146        -->
+147        <service
+147-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\980b5bfe3e3724d47215f6bea507074f\jetified-play-services-auth-19.0.0\AndroidManifest.xml:33:9-37:51
+148            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+148-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\980b5bfe3e3724d47215f6bea507074f\jetified-play-services-auth-19.0.0\AndroidManifest.xml:34:13-89
+149            android:exported="true"
+149-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\980b5bfe3e3724d47215f6bea507074f\jetified-play-services-auth-19.0.0\AndroidManifest.xml:35:13-36
+150            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+150-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\980b5bfe3e3724d47215f6bea507074f\jetified-play-services-auth-19.0.0\AndroidManifest.xml:36:13-107
+151            android:visibleToInstantApps="true" />
+151-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\980b5bfe3e3724d47215f6bea507074f\jetified-play-services-auth-19.0.0\AndroidManifest.xml:37:13-48
+152
+153        <activity
+153-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:27:9-44:20
+154            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+154-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:28:13-80
+155            android:excludeFromRecents="true"
+155-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:29:13-46
+156            android:exported="true"
+156-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:30:13-36
+157            android:launchMode="singleTask"
+157-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:31:13-44
+158            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+158-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:32:13-72
+159            <intent-filter>
+159-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:33:13-43:29
+160                <action android:name="android.intent.action.VIEW" />
+160-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:17-69
+160-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:25-66
+161
+162                <category android:name="android.intent.category.DEFAULT" />
+162-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:17-76
+162-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:27-73
+163                <category android:name="android.intent.category.BROWSABLE" />
+163-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:17-78
+163-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:27-75
+164
+165                <data
+165-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:39:17-42:51
+166                    android:host="firebase.auth"
+166-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:40:21-49
+167                    android:path="/"
+167-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:41:21-37
+168                    android:scheme="genericidp" />
+168-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:42:21-48
+169            </intent-filter>
+170        </activity>
+171        <activity
+171-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:45:9-62:20
+172            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+172-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:46:13-79
+173            android:excludeFromRecents="true"
+173-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:47:13-46
+174            android:exported="true"
+174-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:48:13-36
+175            android:launchMode="singleTask"
+175-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:49:13-44
+176            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+176-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:50:13-72
+177            <intent-filter>
+177-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:51:13-61:29
+178                <action android:name="android.intent.action.VIEW" />
+178-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:17-69
+178-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:34:25-66
+179
+180                <category android:name="android.intent.category.DEFAULT" />
+180-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:17-76
+180-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:27-73
+181                <category android:name="android.intent.category.BROWSABLE" />
+181-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:17-78
+181-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:37:27-75
+182
+183                <data
+183-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:39:17-42:51
+184                    android:host="firebase.auth"
+184-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:40:21-49
+185                    android:path="/"
+185-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:41:21-37
+186                    android:scheme="recaptcha" />
+186-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:42:21-48
+187            </intent-filter>
+188        </activity>
+189
+190        <service
+190-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:64:9-73:19
+191            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+191-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:65:13-101
+192            android:enabled="true"
+192-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:66:13-35
+193            android:exported="false" >
+193-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:67:13-37
+194            <intent-filter>
+194-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:68:13-72:29
+195                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+195-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:69:17-89
+195-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:69:25-86
+196
+197                <category android:name="android.intent.category.DEFAULT" />
+197-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:17-76
+197-->[com.google.firebase:firebase-auth:20.0.3] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\4803b39464107073e268a9336efc1a2b\jetified-firebase-auth-20.0.3\AndroidManifest.xml:36:27-73
+198            </intent-filter>
+199        </service>
+200
+201        <receiver
+201-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:37:9-44:20
+202            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+202-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:38:13-78
+203            android:exported="true"
+203-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:39:13-36
+204            android:permission="com.google.android.c2dm.permission.SEND" >
+204-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:40:13-73
+205            <intent-filter>
+205-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:41:13-43:29
+206                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+206-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:42:17-81
+206-->[com.google.firebase:firebase-iid:21.0.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\33499116792a8514ccbedfe273be6099\jetified-firebase-iid-21.0.1\AndroidManifest.xml:42:25-78
+207            </intent-filter>
+208        </receiver>
+209
+210        <activity
+210-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\172c4cc7d2889db49d98025f8b53d4fb\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+211            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+211-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\172c4cc7d2889db49d98025f8b53d4fb\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+212            android:exported="false"
+212-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\172c4cc7d2889db49d98025f8b53d4fb\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+213            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+213-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\172c4cc7d2889db49d98025f8b53d4fb\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+214
+215        <provider
+215-->[com.google.firebase:firebase-common:19.5.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\304165273b4d1a6be95bc2d038837cc8\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
+216            android:name="com.google.firebase.provider.FirebaseInitProvider"
+216-->[com.google.firebase:firebase-common:19.5.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\304165273b4d1a6be95bc2d038837cc8\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
+217            android:authorities="com.chat.firebaseinitprovider"
+217-->[com.google.firebase:firebase-common:19.5.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\304165273b4d1a6be95bc2d038837cc8\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
+218            android:directBootAware="true"
+218-->[com.google.firebase:firebase-common:19.5.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\304165273b4d1a6be95bc2d038837cc8\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
+219            android:exported="false"
+219-->[com.google.firebase:firebase-common:19.5.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\304165273b4d1a6be95bc2d038837cc8\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
+220            android:initOrder="100" />
+220-->[com.google.firebase:firebase-common:19.5.0] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\304165273b4d1a6be95bc2d038837cc8\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
+221
+222        <meta-data
+222-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\2fdaa2020938784adda3b358fe2e6aa5\jetified-play-services-basement-17.1.1\AndroidManifest.xml:23:9-25:69
+223            android:name="com.google.android.gms.version"
+223-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\2fdaa2020938784adda3b358fe2e6aa5\jetified-play-services-basement-17.1.1\AndroidManifest.xml:24:13-58
+224            android:value="@integer/google_play_services_version" />
+224-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\imano\.gradle\caches\transforms-2\files-2.1\2fdaa2020938784adda3b358fe2e6aa5\jetified-play-services-basement-17.1.1\AndroidManifest.xml:25:13-66
+225    </application>
+226
+227</manifest>

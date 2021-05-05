@@ -7,13 +7,15 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
+  ImageBackground,
+  Modal,
 } from 'react-native';
-// import { TouchableOpacity } from "react-native-gesture-handler";
 import {padding, width, height} from '../../Utils/constants/styles';
 import color from '../../Utils/constants/color';
-import firebase from 'firebase';
+import auth from '@react-native-firebase/auth';
+import storage from '@react-native-firebase/storage';
+import firestore from '@react-native-firebase/firestore';
 import DocumentPicker from 'react-native-document-picker';
-// import { Colors } from "react-native/Libraries/NewAppScreen";
 
 export default function signUp({navigation}) {
   const [password, setPassword] = useState();
@@ -23,59 +25,33 @@ export default function signUp({navigation}) {
   const [imageUri, setImageUri] = useState();
   const [imageUrl, setImageUrl] = useState();
   const [imageError, setImageError] = useState('');
+  const [transferred, setTransferred] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const [uploading, setUploading] = useState(false);
 
-  const PickProfileImage = async () => {
+  async function PickProfileImage() {
     try {
       const res = await DocumentPicker.pick({
         type: [DocumentPicker.types.images],
       });
-      console.log(
-        res.uri,
-        res.type, // mime type
-        res.name,
-        res.size,
-      );
-      setImageUri(res.uri);
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-            } else {
-        throw err;
-      }
-    }
 
-    // Pick multiple files
-    try {
-      const results = await DocumentPicker.pickMultiple({
-        type: [DocumentPicker.types.images],
-      });
-      for (const res of results) {
-        console.log(
-          res.uri,
-          res.type, 
-          res.name,
-          res.size,
-        );
-      }
+      setImageUri(res.uri);
+      console.log(res.uri, res.type, res.name, res.size);
     } catch (err) {
       if (DocumentPicker.isCancel(err)) {
-        // User cancelled the picker, exit any dialogs or menus and move on
       } else {
         throw err;
       }
     }
-  };
+  }
 
   const uploadImage = async () => {
-    if (imageUri === null) {
-      return null;
-    }
-
     const path = `profile/${Date.now()}/${Date.now()}`;
     return new Promise(async (resolve, rej) => {
       const response = await fetch(imageUri);
       const file = await response.blob();
-      let upload = firebase.storage().ref(path).put(file);
-      // setUploading(true);
+      let upload = storage().ref(path).put(file);
+
       console.log('Post Added');
       upload.on(
         'state_changed',
@@ -83,6 +59,11 @@ export default function signUp({navigation}) {
           console.log(
             `${snapshot.bytesTransferred} transferred out of ${snapshot.totalBytes}`,
           );
+          setTransferred(
+            Math.round(snapshot.bytesTransferred / snapshot.totalBytes) * 100,
+          );
+
+          setVisible(true);
         },
 
         (err) => {
@@ -93,139 +74,91 @@ export default function signUp({navigation}) {
           console.log(url);
           setImageUrl(url);
           resolve(url);
+          setVisible(false);
           setImageUri(null);
+          setUploading(false);
         },
       );
     });
   };
 
   async function signUp() {
-    uploadImage();
-    firebase
-      .auth()
+    auth()
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
         userCredential.user.updateProfile({
           displayName: userName,
           photoURL: imageUrl,
         });
-        if (imageUri === null) {
-          setImageError('please select a profile image');
-        }
-      })
-      .catch((error) => {
-        if (error.code === 'auth/email-already-in-use') {
-          setError('That email address is already in use!');
-          console.log('That email address is already in use!');
-        }
-        if (error.code === 'auth/') {
-          setError('invalid');
-        }
 
-        if (error.code === 'auth/invalid-email') {
-          setError('That email address is invalid!');
-        }
-        setError(error.message);
-      });
-    firebase
-      .database()
-      .ref('users')
-      .push({
-        userName,
-        uid: await firebase.auth().currentUser.uid,
-        profileImage: imageUrl,
-        createdAt: Date.now(),
-      });
+        firestore().collection('users').doc(userCredential.user.uid).set({
+          userName,
+          userImg: '',
+          email,
+          uid: userCredential.user.uid,
+          createdAt: Date.now(),
+          bio: '',
+          web: '',
+        });
+      })
+      .catch((error) => {});
   }
 
   return (
-    <ScrollView>
+    <View style={{backgroundColor: "#fff",flex:1}}>
       <ScrollView>
-        <KeyboardAvoidingView>
-          <TouchableOpacity onPress={() => PickProfileImage()}>
-            <Image
-              source={{uri: imageUri}}
-              style={{
-                width: 180,
-                marginTop: height / 18,
-                alignSelf: 'center',
-                borderRadius: width,
-                height: 180,
-                backgroundColor: 'rgba(0,0,0,0.4)',
-              }}
-            />
-          </TouchableOpacity>
-          <Text>{imageError}</Text>
-          <TouchableOpacity
-            onPress={() => uploadImage()}
-            style={{alignSelf: 'center', marginVertical: width / 25}}>
-            <Text
-              style={{
-                fontSize: padding - 1,
-                borderRadius: padding,
-                width: width / 3,
-                textAlign: 'center',
-                fontWeight: 'bold',
-                color: color.secondry,
-              }}>
-              Save
-            </Text>
-          </TouchableOpacity>
+        <Text
+          style={{
+            position: 'absolute',
+            fontSize: 64,
+            alignSelf: 'center',
+            top: '30%',
+          }}>
+          {'𝓟𝓱𝓸𝓽𝓸𝓰𝓻𝓪𝓶'}
+        </Text>
+        <KeyboardAvoidingView style={{marginTop:'65%'}}>
           <TextInput
             placeholder="User Name"
             onChangeText={(val) => setUserName(val)}
+          
             style={{
-              padding,
-              fontSize: padding,
-              elevation: 28,
-              backgroundColor: color.primary,
-              shadowColor: color.secondry,
+              padding: 10,
+              fontSize: padding - 6,
+              backgroundColor: '#F6F6F6',
               marginHorizontal: padding,
-              fontWeight: 'bold',
-              // marginTop: height / 4,
+              borderColor: '#111',
+              borderWidth: 0.5,
+              borderRadius: 5,
             }}
           />
           <TextInput
             placeholder="Email"
             onChangeText={(val) => setEmail(val)}
-            style={{
-              padding,
-              fontSize: padding,
-              elevation: 28,
-              backgroundColor: color.primary,
-              shadowColor: color.secondry,
-              marginVertical: padding - 4,
+                     style={{
+              padding: 10,
+              marginVertical: padding,
+              fontSize: padding - 6,
+              backgroundColor: '#F6F6F6',
               marginHorizontal: padding,
-              fontWeight: 'bold',
+              borderColor: '#111',
+              borderWidth: 0.5,
+              borderRadius: 5,
             }}
           />
-
           <TextInput
             placeholder="Password"
             onChangeText={(val) => setPassword(val)}
             secureTextEntry
             style={{
-              padding,
-              fontSize: padding,
-              elevation: 28,
-              backgroundColor: color.primary,
-              shadowColor: color.secondry,
+              padding: 10,
+              fontSize: padding - 6,
+              backgroundColor: '#F6F6F6',
               marginHorizontal: padding,
-              fontWeight: 'bold',
+              borderColor: '#111',
+              borderWidth: 0.5,
+              borderRadius: 5,
             }}
           />
-          <Text
-            style={{
-              color: 'red',
-              top: 24 / 2,
-              fontWeight: 'bold',
-              letterSpacing: 0.5,
-              fontSize: padding - 2,
-              textAlign: 'center',
-              marginTop: padding - 10,
-            }}>
-            {error}
-          </Text>
           <View
             style={{
               flexDirection: 'row',
@@ -237,24 +170,28 @@ export default function signUp({navigation}) {
             }}>
             <TouchableOpacity
               onPress={() => signUp()}
-              style={{elevation: 28, shadowColor: color.secondry}}>
-              <Text
-                style={{
-                  fontSize: padding - 1,
-                  marginRight: padding,
-                  backgroundColor: color.secondry,
-                  padding,
-                  borderRadius: padding,
-                  width: width / 3,
-                  textAlign: 'center',
-                  color: color.primary,
-                }}>
-                Sign Up
-              </Text>
+              style={{
+                alignSelf: 'center',
+                backgroundColor: '#45A4FF',
+                padding: 10,
+                borderRadius: 5,
+                width: width - 40,
+              }}>
+              <View>
+                <Text
+                  style={{
+                    fontSize: padding - 4,
+
+                    textAlign: 'center',
+                    color: color.primary,
+                  }}>
+                  Sign up
+                </Text>
+              </View>
             </TouchableOpacity>
           </View>
         </KeyboardAvoidingView>
       </ScrollView>
-    </ScrollView>
+    </View>
   );
 }
